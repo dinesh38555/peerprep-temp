@@ -1,0 +1,215 @@
+/* Common Card Styles */
+.nudgeCard,
+.progressCard,
+.sentimentCard,
+.difficultyCard {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s;
+}
+
+.nudgeCard:hover,
+.progressCard:hover,
+.sentimentCard:hover,
+.difficultyCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.cardHeader h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.icon {
+  font-size: 24px;
+}
+
+.cardSubtitle {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0 0 20px 0;
+}
+
+/* Daily Nudge Styles */
+.nudgeCard {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.nudgeHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.nudgeHeader h3 {
+  color: white;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.nudgeTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  color: white;
+}
+
+.nudgeMessage {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0.95;
+}
+
+.nudgeLoading {
+  opacity: 0.9;
+  font-size: 14px;
+}
+
+/* Progress Chart Styles */
+.progressContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.progressCircle {
+  width: 160px;
+  height: 160px;
+}
+
+.progressCircleAnimated {
+  transition: stroke-dashoffset 1s ease;
+}
+
+.progressNumber {
+  font-size: 32px;
+  font-weight: 700;
+  fill: #1f2937;
+}
+
+.progressLabel {
+  font-size: 12px;
+  fill: #6b7280;
+}
+
+.progressLegend {
+  display: flex;
+  gap: 20px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.legendDot.solved {
+  background-color: #10b981;
+}
+
+.legendDot.attempted {
+  background-color: #fbbf24;
+}
+
+.legendText {
+  font-size: 14px;
+  color: #4b5563;
+  font-weight: 500;
+}
+
+/* Sentiment Trend Styles */
+.chartContainer {
+  margin-top: 20px;
+}
+
+.lineChart {
+  width: 100%;
+  height: auto;
+}
+
+.trendLine {
+  filter: drop-shadow(0 2px 4px rgba(99, 102, 241, 0.2));
+}
+
+.dataPoint {
+  cursor: pointer;
+  transition: r 0.2s;
+}
+
+.dataPoint:hover {
+  r: 7;
+}
+
+.dateLabel {
+  font-size: 11px;
+  fill: #6b7280;
+}
+
+.sentimentScale {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+  padding: 12px;
+  background: #f9fafb;
+  border-radius: 8px;
+}
+
+.scaleLabel {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.chartLoading,
+.chartEmpty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nudgeCard,
+  .progressCard,
+  .sentimentCard,
+  .difficultyCard {
+    padding: 20px;
+  }
+
+  .progressCircle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .progressLegend {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .lineChart {
+    overflow-x: auto;
+  }
+}
